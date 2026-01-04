@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI Personal Life Mentor - Holistic guidance for education, health, and finance to reduce life pressure and improve overall performance">
+    <meta name="keywords" content="AI mentor, life coach, education tracker, health wellness, finance management, student productivity">
+    <title>AI Personal Life Mentor - Your Holistic Life Guide</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">🧠</div>
+                <h1 class="logo-text">Life Mentor</h1>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <span class="toggle-icon">☰</span>
+            </button>
+        </div>
+        
+        <nav class="nav-menu">
+            <a href="#dashboard" class="nav-item active" data-section="dashboard">
+                <span class="nav-icon">📊</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+            <a href="#education" class="nav-item" data-section="education">
+                <span class="nav-icon">📚</span>
+                <span class="nav-text">Education</span>
+            </a>
+            <a href="#health" class="nav-item" data-section="health">
+                <span class="nav-icon">💚</span>
+                <span class="nav-text">Health</span>
+            </a>
+            <a href="#finance" class="nav-item" data-section="finance">
+                <span class="nav-icon">💰</span>
+                <span class="nav-text">Finance</span>
+            </a>
+            <a href="#insights" class="nav-item" data-section="insights">
+                <span class="nav-icon">🔗</span>
+                <span class="nav-text">Insights</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-footer">
+            <button class="chat-toggle-btn" id="chatToggleBtn">
+                <span class="chat-icon">💬</span>
+                <span class="chat-text">AI Mentor</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        <!-- Dashboard Section -->
+        <section class="content-section active" id="dashboard">
+            <header class="section-header">
+                <h2 class="section-title">Dashboard</h2>
+                <p class="section-subtitle">Your holistic life overview</p>
+            </header>
+            
+            <div class="metrics-grid" id="metricsGrid">
+                <!-- Metrics cards will be dynamically inserted -->
+            </div>
+            
+            <div class="dashboard-content">
+                <div class="insights-highlight" id="insightsHighlight">
+                    <!-- Cross-domain insights will appear here -->
+                </div>
+                
+                <div class="recent-activity" id="recentActivity">
+                    <h3 class="subsection-title">Recent Activity</h3>
+                    <div class="activity-feed" id="activityFeed">
+                        <!-- Activity items will be dynamically inserted -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="content-section" id="education">
+            <header class="section-header">
+                <h2 class="section-title">Education</h2>
+                <p class="section-subtitle">Track your learning journey</p>
+            </header>
+            
+            <div class="action-card">
+                <h3 class="card-title">Log Study Session</h3>
+                <form class="input-form" id="studyForm">
+                    <div class="form-group">
+                        <label for="studySubject">Subject</label>
+                        <input type="text" id="studySubject" placeholder="e.g., Mathematics, Programming" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="studyDuration">Duration (hours)</label>
+                            <input type="number" id="studyDuration" min="0.5" max="12" step="0.5" placeholder="2.5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="focusLevel">Focus Level (1-10)</label>
+                            <input type="number" id="focusLevel" min="1" max="10" placeholder="8" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="studyNotes">Notes (optional)</label>
+                        <textarea id="studyNotes" rows="2" placeholder="How did the session go?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log Session</button>
+                </form>
+            </div>
+            
+            <div class="data-display">
+                <h3 class="subsection-title">Study History</h3>
+                <div class="chart-container" id="studyChart">
+                    <!-- Study chart will be rendered here -->
+                </div>
+                <div class="data-list" id="studyList">
+                    <!-- Study sessions will be listed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Health Section -->
+        <section class="content-section" id="health">
+            <header class="section-header">
+                <h2 class="section-title">Health & Wellness</h2>
+                <p class="section-subtitle">Monitor your mental and physical well-being</p>
+            </header>
+            
+            <div class="action-card">
+                <h3 class="card-title">Daily Health Check-in</h3>
+                <form class="input-form" id="healthForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sleepHours">Sleep (hours)</label>
+                            <input type="number" id="sleepHours" min="0" max="16" step="0.5" placeholder="7.5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sleepQuality">Sleep Quality (1-10)</label>
+                            <input type="number" id="sleepQuality" min="1" max="10" placeholder="8" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="stressLevel">Stress Level (1-10)</label>
+                            <input type="number" id="stressLevel" min="1" max="10" placeholder="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mood">Mood</label>
+                            <select id="mood" required>
+                                <option value="">Select mood</option>
+                                <option value="excellent">😄 Excellent</option>
+                                <option value="good">🙂 Good</option>
+                                <option value="okay">😐 Okay</option>
+                                <option value="low">😔 Low</option>
+                                <option value="stressed">😰 Stressed</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="healthNotes">Notes (optional)</label>
+                        <textarea id="healthNotes" rows="2" placeholder="How are you feeling today?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log Health Data</button>
+                </form>
+            </div>
+            
+            <div class="data-display">
+                <h3 class="subsection-title">Health Trends</h3>
+                <div class="chart-container" id="healthChart">
+                    <!-- Health chart will be rendered here -->
+                </div>
+                <div class="data-list" id="healthList">
+                    <!-- Health entries will be listed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Finance Section -->
+        <section class="content-section" id="finance">
+            <header class="section-header">
+                <h2 class="section-title">Finance</h2>
+                <p class="section-subtitle">Manage your spending and savings</p>
+            </header>
+            
+            <div class="action-card">
+                <h3 class="card-title">Log Expense</h3>
+                <form class="input-form" id="financeForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expenseAmount">Amount</label>
+                            <input type="number" id="expenseAmount" min="0" step="0.01" placeholder="50.00" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="expenseCategory">Category</label>
+                            <select id="expenseCategory" required>
+                                <option value="">Select category</option>
+                                <option value="food">🍔 Food</option>
+                                <option value="transport">🚗 Transport</option>
+                                <option value="education">📚 Education</option>
+                                <option value="entertainment">🎮 Entertainment</option>
+                                <option value="health">💊 Health</option>
+                                <option value="shopping">🛍️ Shopping</option>
+                                <option value="other">📦 Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="expenseNotes">Description</label>
+                        <input type="text" id="expenseNotes" placeholder="What did you spend on?" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Log Expense</button>
+                </form>
+            </div>
+            
+            <div class="data-display">
+                <h3 class="subsection-title">Spending Overview</h3>
+                <div class="chart-container" id="financeChart">
+                    <!-- Finance chart will be rendered here -->
+                </div>
+                <div class="data-list" id="financeList">
+                    <!-- Expenses will be listed here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Insights Section -->
+        <section class="content-section" id="insights">
+            <header class="section-header">
+                <h2 class="section-title">Cross-Domain Insights</h2>
+                <p class="section-subtitle">Discover how different areas of your life connect</p>
+            </header>
+            
+            <div class="insights-container" id="insightsContainer">
+                <!-- Cross-domain insights will be dynamically generated -->
+            </div>
+        </section>
+    </main>
+
+    <!-- AI Chatbot Panel -->
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-header-text">
+                    <h3 class="chat-title">AI Life Mentor</h3>
+                    <p class="chat-status">Here to guide you</p>
+                </div>
+            </div>
+            <button class="chat-close-btn" id="chatCloseBtn" aria-label="Close chat">✕</button>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <!-- Chat messages will be dynamically inserted -->
+        </div>
+        
+        <div class="chat-input-container">
+            <form class="chat-input-form" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Ask your AI mentor anything..." autocomplete="off">
+                <button type="submit" class="chat-send-btn" aria-label="Send message">
+                    <span class="send-icon">➤</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- Disclaimer Modal -->
+    <div class="modal" id="disclaimerModal">
+        <div class="modal-content">
+            <h2 class="modal-title">Welcome to AI Personal Life Mentor</h2>
+            <div class="modal-body">
+                <p><strong>Important Disclaimer:</strong></p>
+                <ul>
+                    <li>This application provides <strong>guidance only</strong>, not medical diagnosis or financial advice.</li>
+                    <li>All insights are based on patterns in your self-reported data.</li>
+                    <li>For serious health or financial concerns, please consult qualified professionals.</li>
+                    <li>You maintain full control of your data, which is stored locally in your browser.</li>
+                </ul>
+                <p>By continuing, you acknowledge that you understand this is a supportive tool, not a replacement for professional services.</p>
+            </div>
+            <button class="btn btn-primary" id="acceptDisclaimer">I Understand</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/education.js"></script>
+    <script src="js/health.js"></script>
+    <script src="js/finance.js"></script>
+    <script src="js/intelligence.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
